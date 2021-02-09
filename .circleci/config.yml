@@ -64,7 +64,7 @@ jobs:
   Fail_Job:
     <<: *defaults
     steps:
-      - run: return 1   # if return not 0 , therefore job failed
+      - run: cat a.txt  # if return not 0 , therefore job failed
       - run:
           name: on error
           command: echo "Hello Error!"
