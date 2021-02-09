@@ -61,6 +61,14 @@ jobs:
           - attach_workspace:
               at: ~/
           - run: cat ~/output.txt
+  Fail_Job:
+        <<: *defaults
+    steps:
+      - run: return 1   # if return not 0 , therefore job failed
+      - run:
+          name: on error
+          command: echo "Hello Error!"
+          when: on_fail
 
 
 workflows:
@@ -77,3 +85,4 @@ workflows:
           requires:
               - save_hello_world_output
       - command_job
+      - Fail_Job
