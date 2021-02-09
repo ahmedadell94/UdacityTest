@@ -62,9 +62,10 @@ jobs:
               at: ~/
           - run: cat ~/output.txt
   Fail_Job:
-    <<: *defaults
+    docker:
+      - image: circleci/node:13.8.0 
     steps:
-      - run: cat a.txt  # if return not 0 , therefore job failed
+      - run: return 1 # if return not 0 , therefore job failed
       - run:
           name: on error
           command: echo "Hello Error!"
