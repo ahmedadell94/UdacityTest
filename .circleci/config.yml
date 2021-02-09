@@ -51,7 +51,7 @@ jobs:
               paths:
                 - output.txt
   command_job:
-        <<: *default
+        <<: *defaults
         steps:
             - print_pipeline_id
   print_output_file:
