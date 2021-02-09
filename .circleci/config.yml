@@ -62,7 +62,7 @@ jobs:
               at: ~/
           - run: cat ~/output.txt
   Fail_Job:
-        <<: *defaults
+    <<: *defaults
     steps:
       - run: return 1   # if return not 0 , therefore job failed
       - run:
