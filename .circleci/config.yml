@@ -11,7 +11,7 @@ jobs:
           command: |
             aws cloudformation create-stack \
                 --stack-name my-stack \
-              ---template-body file://template.yml
+              --template-body file://template.yml
 workflows:
   my_workflow:
     jobs:
