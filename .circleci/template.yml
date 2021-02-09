@@ -5,7 +5,7 @@ Resources:
        SecurityGroups:
          - !Ref InstanceSecurityGroup
        KeyName: Udacity
-       ImageId: 'ami-068663a3c619dd892'  https://cloud-images.ubuntu.com/locator/ec2/
+       ImageId: 'ami-005c06c6de69aee84' 
     InstanceSecurityGroup:
      Type: 'AWS::EC2::SecurityGroup'
      Properties:
